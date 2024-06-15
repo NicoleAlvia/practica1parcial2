@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const espacio_parqueo_controller_1 = require("../controllers/espacio_parqueo.controller");
+const router = (0, express_1.Router)();
+router.get('/espacio_parqueo', espacio_parqueo_controller_1.getEspacio_parqueo);
+router.post('/espacio_parqueo', espacio_parqueo_controller_1.createEspacio_parqueo);
+router.put('/espacio_parqueo/:id', espacio_parqueo_controller_1.updateEspacio_parqueo);
+router.delete('/espacio_parqueo/:id', espacio_parqueo_controller_1.deleteEspacio_parqueo);
+exports.default = router;

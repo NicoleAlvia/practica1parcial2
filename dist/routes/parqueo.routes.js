@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const parqueo_controller_1 = require("../controllers/parqueo.controller");
+const router = (0, express_1.Router)();
+router.get('/parqueos', parqueos_controller_1.getParqueo);
+router.post('/parqueos', parqueo_controller_1.createParqueo);
+router.put('/parqueos/:id', parqueo_controller_1.updateParqueo);
+router.delete('/parqueos/:id', parqueo_controller_1.deleteParqueo);
+exports.default = router;
